@@ -1,0 +1,208 @@
+<?php if (!defined('TL_ROOT')) die('You cannot access this file directly!');
+
+/**
+ * Contao Open Source CMS
+ * Copyright (C) 2005-2012 Leo Feyer
+ *
+ * Formerly known as TYPOlight Open Source CMS.
+ *
+ * This program is free software: you can redistribute it and/or
+ * modify it under the terms of the GNU Lesser General Public
+ * License as published by the Free Software Foundation, either
+ * version 3 of the License, or (at your option) any later version.
+ * 
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * Lesser General Public License for more details.
+ * 
+ * You should have received a copy of the GNU Lesser General Public
+ * License along with this program. If not, please visit the Free
+ * Software Foundation website at <http://www.gnu.org/licenses/>.
+ *
+ * PHP version 5
+ * @copyright  Lionel Maccaud 
+ * @author     Lionel Maccaud 
+ * @package    superfish 
+ * @license    MIT 
+ * @filesource
+ */
+
+/**
+ * Table tl_layout
+ */
+// Changing the palette to add new fields.
+$GLOBALS['TL_DCA']['tl_layout']['palettes']['default'] = str_replace
+(
+    '{script_legend}',
+    '{superfish_legend},superfish;{script_legend}',
+    $GLOBALS['TL_DCA']['tl_layout']['palettes']['default']
+);
+
+// Add superfish fields to subpalettes.
+$GLOBALS['TL_DCA']['tl_layout']['palettes']['__selector__'][] = 'superfish';
+$GLOBALS['TL_DCA']['tl_layout']['palettes']['__selector__'][] = 'supersubs';
+$GLOBALS['TL_DCA']['tl_layout']['subpalettes']['superfish'] = 'hoverIntent,sf_hoverClass,sf_pathClass,sf_pathLevels,sf_delay,sf_animation,sf_speed,sf_autoArrows,sf_dropShadows,sf_disableHI,sf_onInit,sf_onBeforeShow,sf_onShow,sf_onHide,supersubs';
+$GLOBALS['TL_DCA']['tl_layout']['subpalettes']['supersubs'] = 'sf_minWidth,sf_maxWidth,sf_extraWidth';
+
+$GLOBALS['TL_DCA']['tl_layout']['fields']['superfish'] = array
+(
+    'label'      => &$GLOBALS['TL_LANG']['tl_layout']['superfish'],
+    'exclude'    => true,
+    'inputType'  => 'checkbox',
+    'eval'       => array('submitOnChange'=>true)
+);
+
+$GLOBALS['TL_DCA']['tl_layout']['fields']['hoverIntent'] = array
+(
+    'label'      => &$GLOBALS['TL_LANG']['tl_layout']['hoverIntent'],
+    'exclude'    => true,
+    'inputType'  => 'checkbox',
+    'eval'       => array('isBoolean' => true, 'tl_class'=>'w50 m12')
+);
+
+$GLOBALS['TL_DCA']['tl_layout']['fields']['sf_disableHI'] = array
+(
+    'label'      => &$GLOBALS['TL_LANG']['tl_layout']['sf_disableHI'],
+    'exclude'    => true,
+    'inputType'  => 'checkbox',
+    'eval'       => array('isBoolean' => true, 'tl_class'=>'w50 m12')
+);
+
+$GLOBALS['TL_DCA']['tl_layout']['fields']['supersubs'] = array
+(
+    'label'      => &$GLOBALS['TL_LANG']['tl_layout']['supersubs'],
+    'exclude'    => true,
+    'inputType'  => 'checkbox',
+    'eval'       => array('submitOnChange'=>true, 'tl_class'=>'w50 m12')
+);
+
+$GLOBALS['TL_DCA']['tl_layout']['fields']['sf_delay'] = array
+(
+    'label'      => &$GLOBALS['TL_LANG']['tl_layout']['sf_delay'],
+    'exclude'    => true,
+    'default'    => '200',
+    'inputType'  => 'text',
+    'eval'       => array('rgxp'=>'digit', 'maxlength'=>10, 'tl_class'=>'clr')
+);
+
+$GLOBALS['TL_DCA']['tl_layout']['fields']['sf_speed'] = array
+(
+    'label'      => &$GLOBALS['TL_LANG']['tl_layout']['sf_speed'],
+    'exclude'    => true,
+    'default'    => 'normal',
+    'inputType'  => 'text',
+    'eval'       => array('maxlength'=>255, 'tl_class'=>'w50')
+);
+
+$GLOBALS['TL_DCA']['tl_layout']['fields']['sf_autoArrows'] = array
+(
+    'label'      => &$GLOBALS['TL_LANG']['tl_layout']['sf_autoArrows'],
+    'exclude'    => true,
+    'default'    => true,
+    'inputType'  => 'checkbox',
+    'eval'       => array('isBoolean' => true, 'tl_class'=>'w50 m12')
+);
+
+$GLOBALS['TL_DCA']['tl_layout']['fields']['sf_dropShadows'] = array
+(
+    'label'      => &$GLOBALS['TL_LANG']['tl_layout']['sf_dropShadows'],
+    'exclude'    => true,
+    'default'    => true,
+    'inputType'  => 'checkbox',
+    'eval'       => array('isBoolean' => true, 'tl_class'=>'w50 m12')
+);
+
+$GLOBALS['TL_DCA']['tl_layout']['fields']['sf_minWidth'] = array
+(
+    'label'      => &$GLOBALS['TL_LANG']['tl_layout']['sf_minWidth'],
+    'exclude'    => true,
+    'default'    => '12',
+    'inputType'  => 'text',
+    'eval'       => array('rgxp'=>'digit', 'maxlength'=>10, 'tl_class'=>'w50')
+);
+
+$GLOBALS['TL_DCA']['tl_layout']['fields']['sf_maxWidth'] = array
+(
+    'label'      => &$GLOBALS['TL_LANG']['tl_layout']['sf_maxWidth'],
+    'exclude'    => true,
+    'default'    => '27',
+    'inputType'  => 'text',
+    'eval'       => array('rgxp'=>'digit', 'maxlength'=>10, 'tl_class'=>'w50')
+);
+
+$GLOBALS['TL_DCA']['tl_layout']['fields']['sf_extraWidth'] = array
+(
+    'label'      => &$GLOBALS['TL_LANG']['tl_layout']['sf_extraWidth'],
+    'exclude'    => true,
+    'default'    => '1',
+    'inputType'  => 'text',
+    'eval'       => array('rgxp'=>'digit', 'maxlength'=>10, 'tl_class'=>'w50')
+);
+
+$GLOBALS['TL_DCA']['tl_layout']['fields']['sf_hoverClass'] = array
+(
+    'label'      => &$GLOBALS['TL_LANG']['tl_layout']['sf_hoverClass'],
+    'exclude'    => true,
+    'default'    => 'sfHover',
+    'inputType'  => 'text',
+    'eval'       => array('maxlength'=>255, 'tl_class'=>'w50')
+);
+
+$GLOBALS['TL_DCA']['tl_layout']['fields']['sf_pathClass'] = array
+(
+    'label'      => &$GLOBALS['TL_LANG']['tl_layout']['sf_pathClass'],
+    'exclude'    => true,
+    'inputType'  => 'text',
+    'eval'       => array('maxlength'=>255, 'tl_class'=>'w50')
+);
+
+$GLOBALS['TL_DCA']['tl_layout']['fields']['sf_animation'] = array
+(
+    'label'      => &$GLOBALS['TL_LANG']['tl_layout']['sf_animation'],
+    'exclude'    => true,
+    'inputType'  => 'textarea',
+    'eval'       => array('style'=>'height:100px;', 'preserveTags'=>true)
+);
+
+$GLOBALS['TL_DCA']['tl_layout']['fields']['sf_onInit'] = array
+(
+    'label'      => &$GLOBALS['TL_LANG']['tl_layout']['sf_onInit'],
+    'exclude'    => true,
+    'inputType'  => 'textarea',
+    'eval'       => array('style'=>'height:100px;', 'preserveTags'=>true)
+);
+
+$GLOBALS['TL_DCA']['tl_layout']['fields']['sf_onBeforeShow'] = array
+(
+    'label'      => &$GLOBALS['TL_LANG']['tl_layout']['sf_onBeforeShow'],
+    'exclude'    => true,
+    'inputType'  => 'textarea',
+    'eval'       => array('style'=>'height:100px;', 'preserveTags'=>true)
+);
+
+$GLOBALS['TL_DCA']['tl_layout']['fields']['sf_onShow'] = array
+(
+    'label'      => &$GLOBALS['TL_LANG']['tl_layout']['sf_onShow'],
+    'exclude'    => true,
+    'inputType'  => 'textarea',
+    'eval'       => array('style'=>'height:100px;', 'preserveTags'=>true)
+);
+
+$GLOBALS['TL_DCA']['tl_layout']['fields']['sf_onHide'] = array
+(
+    'label'      => &$GLOBALS['TL_LANG']['tl_layout']['sf_onHide'],
+    'exclude'    => true,
+    'inputType'  => 'textarea',
+    'eval'       => array('style'=>'height:100px;', 'preserveTags'=>true)
+);
+
+$GLOBALS['TL_DCA']['tl_layout']['fields']['sf_pathLevels'] = array
+(
+    'label'      => &$GLOBALS['TL_LANG']['tl_layout']['sf_pathLevels'],
+    'exclude'    => true,
+    'default'    => '1',
+    'inputType'  => 'text',
+    'eval'       => array('rgxp'=>'digit', 'maxlength'=>10, 'tl_class'=>'w50')
+);
+?>
