@@ -43,7 +43,7 @@ class Superfish extends Frontend {
         
         $options[0] = "hoverClass: '".$objLayout->sf_hoverClass."',\n";
         $options[1] = (($objLayout->sf_pathClass != NULL) ? "pathClass: '".$objLayout->sf_pathClass."',\n" : "");
-        $options[2] = "pathLevels: ".$objLayout->sf_pathLevels.",\n";
+        $options[2] = (($objLayout->sf_pathClass != NULL) ? "pathLevels: ".$objLayout->sf_pathLevels.",\n" : "");
         $options[3] = "delay: ".$objLayout->sf_delay.",\n";
         $options[4] = (($objLayout->sf_animation != NULL) ? "animation: '".$objLayout->sf_animation."',\n" : "");
         $options[5] = "speed: ".(is_numeric($objLayout->sf_speed) ? $objLayout->sf_speed.",\n" : "'".$objLayout->sf_speed."',\n");

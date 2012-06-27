@@ -1,11 +1,11 @@
-/** DEMO SKIN **/
+/* DEMO SKIN */
 .sf-menu
 {
     float:left;
     margin-bottom:1em;
 }
 
-.sf-menu a
+.sf-menu a, .sf-menu span.active
 {
     border-left:1px solid #fff;
     text-decoration:none;
@@ -18,7 +18,9 @@
 }
 
 .sf-menu .level_2 a,
-.sf-menu .level_3 a
+.sf-menu .level_2 span.active,
+.sf-menu .level_3 a,
+.sf-menu .level_3 span.active
 {
     border-top:1px solid #fff;
 }
@@ -48,7 +50,7 @@
     outline: 0;
 }
 
-/** arrows **/
+/* arrows */
 .sf-menu a.sf-with-ul
 {
     min-width:1px;
@@ -65,10 +67,10 @@
     display:block;
     text-indent:-999em;
     top: 1.05em;
-    background: url("../external/superfish/images/arrows-white.png") no-repeat -10px -100px;
+    background: url("tl_files/superfish/images/arrows-white.png") no-repeat -10px -100px;
 }
 
-a > .sf-sub-indicator
+a > .sf-sub-indicator, span > .sf-sub-indicator
 {
     top:.95em;
     background-position: 0 -100px;
@@ -108,10 +110,10 @@ li.sfHover > a > .sf-sub-indicator
     background-position: -10px 0;
 }
 
-/** shadows for all but IE6 **/
+/* shadows for all but IE6 */
 .sf-shadow ul
 {
-    background: url("../external/superfish/images/shadow.png") no-repeat bottom right;
+    background: url("tl_files/superfish/images/shadow.png") no-repeat bottom right;
     padding: 0 8px 9px 0;
     -moz-border-radius-bottomleft: 17px;
     -moz-border-radius-topright: 17px;
