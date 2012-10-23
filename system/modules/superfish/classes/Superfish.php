@@ -1,32 +1,21 @@
-<?php if (!defined('TL_ROOT')) die('You cannot access this file directly!');
+<?php
 
 /**
  * Contao Open Source CMS
+ *
  * Copyright (C) 2005-2012 Leo Feyer
  *
- * Formerly known as TYPOlight Open Source CMS.
- *
- * This program is free software: you can redistribute it and/or
- * modify it under the terms of the GNU Lesser General Public
- * License as published by the Free Software Foundation, either
- * version 3 of the License, or (at your option) any later version.
- * 
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * Lesser General Public License for more details.
- * 
- * You should have received a copy of the GNU Lesser General Public
- * License along with this program. If not, please visit the Free
- * Software Foundation website at <http://www.gnu.org/licenses/>.
- *
- * PHP version 5
- * @copyright  Lionel Maccaud 
- * @author     Lionel Maccaud 
- * @package    superfish 
- * @license    MIT 
- * @filesource
+ * @package superfish
+ * @link    http://www.contao.org
+ * @license http://www.gnu.org/licenses/lgpl-3.0.html LGPL
  */
+
+
+/**
+ * Run in a custom namespace, so the class can be replaced
+ */
+namespace Contao;
+
 
 /**
  * Class Superfish 
@@ -35,9 +24,9 @@
  * @author     Lionel Maccaud 
  * @package    Controller
  */
-class Superfish extends Frontend {
+class Superfish extends \Frontend {
 
-    public function myGeneratePage(Database_Result $objPage, Database_Result $objLayout, PageRegular $objPageRegular) {
+    public function myGeneratePage($objPage, $objLayout, $objPageRegular) {
         
         $options = array();
         
@@ -58,11 +47,11 @@ class Superfish extends Frontend {
         // Reindex the array
         $options = array_values($options);
         
-        if($objLayout->usejquery == 1 && $objLayout->superfish == 1) {
+        if($objLayout->superfish == 1) {
             $GLOBALS['TL_HEAD'][] = 
-                (($objLayout->hoverIntent == true) ? '<script src="system/modules/superfish/html/external/superfish/js/hoverIntent_r6.js"></script>' : '') . "\n" .
-                "<script src=\"system/modules/superfish/html/external/superfish/js/superfish.js\"></script>" . "\n" .
-                (($objLayout->supersubs == true) ? '<script src="system/modules/superfish/html/external/superfish/js/supersubs.js"></script>' : '') . "\n" .
+                (($objLayout->hoverIntent == true) ? '<script src="system/modules/superfish/assets/js/hoverIntent_r6.js"></script>' : '') . "\n" .
+                "<script src=\"system/modules/superfish/assets/js/superfish.js\"></script>" . "\n" .
+                (($objLayout->supersubs == true) ? '<script src="system/modules/superfish/assets/js/supersubs.js"></script>' : '') . "\n" .
                 "<script>
                 jQuery(document).ready(function(){
                     (function($) { ".
