@@ -48,12 +48,11 @@ class Superfish extends \Frontend {
         $options = array_values($options);
         
         if($objLayout->superfish == 1) {
-            $GLOBALS['TL_HEAD'][] = 
+            $GLOBALS['TL_MOOTOOLS'][] = 
                 (($objLayout->hoverIntent == true) ? '<script src="system/modules/superfish/assets/js/hoverIntent_r6.js"></script>' : '') . "\n" .
                 "<script src=\"system/modules/superfish/assets/js/superfish.js\"></script>" . "\n" .
                 (($objLayout->supersubs == true) ? '<script src="system/modules/superfish/assets/js/supersubs.js"></script>' : '') . "\n" .
                 "<script>
-                jQuery(document).ready(function(){
                     (function($) { ".
                     (($objLayout->supersubs == false) ? "
                         $(\"ul.sf-menu\").superfish({" ."\n".
@@ -93,7 +92,6 @@ class Superfish extends \Frontend {
                             "});
                         ") ."
                     })(jQuery);
-                });
                 </script>
             ";
         }

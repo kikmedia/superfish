@@ -67,7 +67,7 @@
     display:block;
     text-indent:-999em;
     top: 1.05em;
-    background: url("tl_files/superfish/images/arrows-white.png") no-repeat -10px -100px;
+    background: url("../../../files/superfish/images/arrows-white.png") no-repeat -10px -100px;
 }
 
 a > .sf-sub-indicator, span > .sf-sub-indicator
@@ -113,7 +113,7 @@ li.sfHover > a > .sf-sub-indicator
 /* shadows for all but IE6 */
 .sf-shadow ul
 {
-    background: url("tl_files/superfish/images/shadow.png") no-repeat bottom right;
+    background: url("../../../files/superfish/images/shadow.png") no-repeat bottom right;
     padding: 0 8px 9px 0;
     -moz-border-radius-bottomleft: 17px;
     -moz-border-radius-topright: 17px;
