@@ -47,7 +47,10 @@
 			sf.o[s] = sf.op = o;
 			
 			$('li:has(ul)',this)[($.fn.hoverIntent && !o.disableHI) ? 'hoverIntent' : 'hover'](over,out).each(function() {
-				if (o.autoArrows) addArrow( $('>a:first-child',this) );
+				if (o.autoArrows) {
+					addArrow( $('>a:first-child',this) );
+					addArrow( $('>span.active:first-child',this) );
+				}
 			})
 			.not('.'+c.bcClass)
 				.hideSuperfishUl();
