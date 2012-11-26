@@ -52,7 +52,7 @@ class Superfish extends \Frontend {
         // Reindex the array
         $options = array_values($options);
         
-        // Contert to String
+        // Convert to String
         $options = implode(",\n", $options);
         
         if($objLayout->superfish == 1) {
