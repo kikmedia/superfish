@@ -3,3 +3,4 @@ Superfish by Joel Birch (http://users.tpg.com.au/j_birch/plugins/superfish/)
 -----
 
 Contao extension by Lionel Maccaud (http://www.contao.org/en/extension-list/authors/lionel.html)
+License: MIT

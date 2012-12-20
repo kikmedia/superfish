@@ -1,13 +1,13 @@
 <?php
 
 /**
- * Contao Open Source CMS
+ * Superfish
+ * Superfish menu jQuery plugin for Contao
  *
- * Copyright (C) 2005-2012 Leo Feyer
- *
- * @package superfish
- * @link    http://www.contao.org
- * @license http://www.gnu.org/licenses/lgpl-3.0.html LGPL
+ * @author    Lionel Maccaud
+ * @copyright Lionel Maccaud
+ * @package   superfish
+ * @license   MIT
  */
 
 /**
@@ -16,5 +16,4 @@
  * -------------------------------------------------------------------------
  */
 $GLOBALS['TL_HOOKS']['generatePage'][] = array('Superfish', 'myGeneratePage');
-
 ?>

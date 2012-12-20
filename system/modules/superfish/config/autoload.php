@@ -1,15 +1,14 @@
 <?php
 
 /**
- * Contao Open Source CMS
- * 
- * Copyright (C) 2005-2012 Leo Feyer
- * 
- * @package Superfish
- * @link    http://contao.org
- * @license http://www.gnu.org/licenses/lgpl-3.0.html LGPL
+ * Superfish
+ * Superfish menu jQuery plugin for Contao
+ *
+ * @author    Lionel Maccaud
+ * @copyright Lionel Maccaud
+ * @package   superfish
+ * @license   MIT
  */
-
 
 /**
  * Register the classes
@@ -19,7 +18,6 @@ ClassLoader::addClasses(array
 	// Classes
 	'Contao\Superfish' => 'system/modules/superfish/classes/Superfish.php',
 ));
-
 
 /**
  * Register the templates
