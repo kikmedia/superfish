@@ -27,6 +27,7 @@ $GLOBALS['TL_LANG']['tl_layout']['sf_onInit']       = array('On init', 'Callback
 $GLOBALS['TL_LANG']['tl_layout']['sf_onBeforeShow'] = array('On before show', 'Callback function fires just before reveal animation begins – \'this\' is the ul about to open.');
 $GLOBALS['TL_LANG']['tl_layout']['sf_onShow']       = array('On show', 'Callback function fires once reveal animation completed – \'this\' is the opened ul.');
 $GLOBALS['TL_LANG']['tl_layout']['sf_onHide']       = array('On hide', 'Callback function fires after a sub-menu has closed – \'this\' is the ul that just closed.');
+$GLOBALS['TL_LANG']['tl_layout']['sf_onIdle']       = array('On idle', 'Callback function fires when the \'current\' submenu is restored (if using pathClass functionality)');
 
 $GLOBALS['TL_LANG']['tl_layout']['supersubs']       = array('Supersubs - plugin', 'Uses Supersubs to make the sub-menu widths variable.');
 $GLOBALS['TL_LANG']['tl_layout']['sf_minWidth']     = array('Min width', 'Minimum width of sub-menus in em units.');

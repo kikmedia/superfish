@@ -40,6 +40,7 @@ class Superfish extends \Frontend {
         $options[9]  = (($objLayout->sf_onBeforeShow != NULL) ? "onBeforeShow: ".$objLayout->sf_onBeforeShow : '');
         $options[10] = (($objLayout->sf_onShow != NULL) ? "onShow: ".$objLayout->sf_onShow : '');
         $options[11] = (($objLayout->sf_onHide != NULL) ? "onHide: ".$objLayout->sf_onHide : '');
+        $options[12] = (($objLayout->sf_onIdle != NULL) ? "onIdle: ".$objLayout->sf_onIdle : '');
         
         // remove empty value
         foreach ($options as $key => $value) {
