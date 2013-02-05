@@ -22,7 +22,6 @@ CREATE TABLE `tl_layout` (
   `sf_delay` int(10) unsigned NOT NULL default '200',
   `sf_speed` varchar(32) NOT NULL default 'normal',
   `sf_autoArrows` char(1) NOT NULL default '1',
-  `sf_dropShadows` char(1) NOT NULL default '1',
   `sf_disableHI` char(1) NOT NULL default '',
   `sf_minWidth` int(10) unsigned NOT NULL default '12',
   `sf_maxWidth` int(10) unsigned NOT NULL default '27',

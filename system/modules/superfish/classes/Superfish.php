@@ -35,12 +35,11 @@ class Superfish extends \Frontend {
         $options[4]  = (($objLayout->sf_animation != NULL) ? "animation: ".$objLayout->sf_animation : '');
         $options[5]  = "speed: ".(is_numeric($objLayout->sf_speed) ? $objLayout->sf_speed : "'".$objLayout->sf_speed."'");
         $options[6]  = (($objLayout->sf_autoArrows == 1) ? '' : "autoArrows: false");
-        $options[7]  = (($objLayout->sf_dropShadows == 1) ? '' : "dropShadows: false");
-        $options[8]  = (($objLayout->sf_disableHI == 1) ? "disableHI: true" : '');
-        $options[9]  = (($objLayout->sf_onInit != NULL) ? "onInit: ".$objLayout->sf_onInit : '');
-        $options[10] = (($objLayout->sf_onBeforeShow != NULL) ? "onBeforeShow: ".$objLayout->sf_onBeforeShow : '');
-        $options[11] = (($objLayout->sf_onShow != NULL) ? "onShow: ".$objLayout->sf_onShow : '');
-        $options[12] = (($objLayout->sf_onHide != NULL) ? "onHide: ".$objLayout->sf_onHide : '');
+        $options[7]  = (($objLayout->sf_disableHI == 1) ? "disableHI: true" : '');
+        $options[8]  = (($objLayout->sf_onInit != NULL) ? "onInit: ".$objLayout->sf_onInit : '');
+        $options[9]  = (($objLayout->sf_onBeforeShow != NULL) ? "onBeforeShow: ".$objLayout->sf_onBeforeShow : '');
+        $options[10] = (($objLayout->sf_onShow != NULL) ? "onShow: ".$objLayout->sf_onShow : '');
+        $options[11] = (($objLayout->sf_onHide != NULL) ? "onHide: ".$objLayout->sf_onHide : '');
         
         // remove empty value
         foreach ($options as $key => $value) {

@@ -24,7 +24,7 @@ $GLOBALS['TL_DCA']['tl_layout']['palettes']['default'] = str_replace
 // Add superfish fields to subpalettes.
 $GLOBALS['TL_DCA']['tl_layout']['palettes']['__selector__'][] = 'superfish';
 $GLOBALS['TL_DCA']['tl_layout']['palettes']['__selector__'][] = 'supersubs';
-$GLOBALS['TL_DCA']['tl_layout']['subpalettes']['superfish'] = 'hoverIntent,sf_hoverClass,sf_pathClass,sf_pathLevels,sf_delay,sf_animation,sf_speed,sf_autoArrows,sf_dropShadows,sf_disableHI,sf_onInit,sf_onBeforeShow,sf_onShow,sf_onHide,supersubs';
+$GLOBALS['TL_DCA']['tl_layout']['subpalettes']['superfish'] = 'hoverIntent,sf_hoverClass,sf_pathClass,sf_pathLevels,sf_delay,sf_animation,sf_speed,sf_autoArrows,sf_disableHI,sf_onInit,sf_onBeforeShow,sf_onShow,sf_onHide,supersubs';
 $GLOBALS['TL_DCA']['tl_layout']['subpalettes']['supersubs'] = 'sf_minWidth,sf_maxWidth,sf_extraWidth';
 
 $GLOBALS['TL_DCA']['tl_layout']['fields']['superfish'] = array
@@ -80,15 +80,6 @@ $GLOBALS['TL_DCA']['tl_layout']['fields']['sf_speed'] = array
 $GLOBALS['TL_DCA']['tl_layout']['fields']['sf_autoArrows'] = array
 (
     'label'      => &$GLOBALS['TL_LANG']['tl_layout']['sf_autoArrows'],
-    'exclude'    => true,
-    'default'    => true,
-    'inputType'  => 'checkbox',
-    'eval'       => array('isBoolean' => true, 'tl_class'=>'w50 m12')
-);
-
-$GLOBALS['TL_DCA']['tl_layout']['fields']['sf_dropShadows'] = array
-(
-    'label'      => &$GLOBALS['TL_LANG']['tl_layout']['sf_dropShadows'],
     'exclude'    => true,
     'default'    => true,
     'inputType'  => 'checkbox',
