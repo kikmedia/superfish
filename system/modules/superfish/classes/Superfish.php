@@ -57,10 +57,10 @@ class Superfish extends \Frontend {
         
         if($objLayout->superfish == 1) {
             $GLOBALS['TL_MOOTOOLS'][] = 
-                (($objLayout->hoverIntent == 1) ? '<script src="system/modules/superfish/assets/js/hoverIntent.js"></script>' : '') . "\n" .
-                "<script src=\"system/modules/superfish/assets/js/superfish.js\"></script>" . "\n" .
-                (($objLayout->supersubs == 1) ? '<script src="system/modules/superfish/assets/js/supersubs.js"></script>' : '') . "\n" .
-                "<script>
+                (($objLayout->hoverIntent == 1) ? '<script' . ($objLayout->doctype != 'html5' ? ' type="text/javascript"' : '') . ' src="system/modules/superfish/assets/js/hoverIntent.js"></script>' : '') . "\n" .
+                "<script" . ($objLayout->doctype != 'html5' ? ' type="text/javascript"' : '') . " src=\"system/modules/superfish/assets/js/superfish.js\"></script>" . "\n" .
+                (($objLayout->supersubs == 1) ? '<script' . ($objLayout->doctype != 'html5' ? ' type="text/javascript"' : '') . ' src="system/modules/superfish/assets/js/supersubs.js"></script>' : '') . "\n" .
+                "<script" . ($objLayout->doctype != 'html5' ? ' type="text/javascript"' : '') . ">
                     (function($) { ".
                     (($objLayout->supersubs == 0) ? "
                         $(\"ul.sf-menu\").superfish({" ."\n".
