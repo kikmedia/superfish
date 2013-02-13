@@ -56,7 +56,7 @@ class Superfish extends \Frontend {
         $options = implode(",\n", $options);
         
         if($objLayout->superfish == 1) {
-            $GLOBALS['TL_MOOTOOLS'][] = 
+            $GLOBALS['TL_JQUERY'][] = 
                 (($objLayout->hoverIntent == 1) ? '<script' . ($objLayout->doctype != 'html5' ? ' type="text/javascript"' : '') . ' src="system/modules/superfish/assets/js/hoverIntent.js"></script>' : '') . "\n" .
                 "<script" . ($objLayout->doctype != 'html5' ? ' type="text/javascript"' : '') . " src=\"system/modules/superfish/assets/js/superfish.js\"></script>" . "\n" .
                 (($objLayout->supersubs == 1) ? '<script' . ($objLayout->doctype != 'html5' ? ' type="text/javascript"' : '') . ' src="system/modules/superfish/assets/js/supersubs.js"></script>' : '') . "\n" .
