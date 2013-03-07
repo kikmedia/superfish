@@ -33,14 +33,17 @@ class Superfish extends \Frontend {
         $options[2]  = (($objLayout->sf_pathClass != NULL) ? "pathLevels: ".$objLayout->sf_pathLevels : '');
         $options[3]  = "delay: ".$objLayout->sf_delay;
         $options[4]  = (($objLayout->sf_animation != NULL) ? "animation: ".$objLayout->sf_animation : '');
-        $options[5]  = "speed: ".(is_numeric($objLayout->sf_speed) ? $objLayout->sf_speed : "'".$objLayout->sf_speed."'");
-        $options[6]  = (($objLayout->sf_autoArrows == 1) ? '' : "autoArrows: false");
-        $options[7]  = (($objLayout->sf_disableHI == 1) ? "disableHI: true" : '');
-        $options[8]  = (($objLayout->sf_onInit != NULL) ? "onInit: ".$objLayout->sf_onInit : '');
-        $options[9]  = (($objLayout->sf_onBeforeShow != NULL) ? "onBeforeShow: ".$objLayout->sf_onBeforeShow : '');
-        $options[10] = (($objLayout->sf_onShow != NULL) ? "onShow: ".$objLayout->sf_onShow : '');
-        $options[11] = (($objLayout->sf_onHide != NULL) ? "onHide: ".$objLayout->sf_onHide : '');
-        $options[12] = (($objLayout->sf_onIdle != NULL) ? "onIdle: ".$objLayout->sf_onIdle : '');
+        $options[5]  = (($objLayout->sf_animationOut != NULL) ? "animationOut: ".$objLayout->sf_animationOut : '');
+        $options[6]  = "speed: ".(is_numeric($objLayout->sf_speed) ? $objLayout->sf_speed : "'".$objLayout->sf_speed."'");
+        $options[7]  = "speedOut: ".(is_numeric($objLayout->sf_speedOut) ? $objLayout->sf_speedOut : "'".$objLayout->sf_speedOut."'");
+        $options[8]  = (($objLayout->sf_autoArrows == 1) ? '' : "autoArrows: false");
+        $options[9]  = (($objLayout->sf_disableHI == 1) ? "disableHI: true" : '');
+        $options[10]  = (($objLayout->sf_useClick == 1) ? "useClick: true" : '');
+        $options[11]  = (($objLayout->sf_onInit != NULL) ? "onInit: ".$objLayout->sf_onInit : '');
+        $options[12]  = (($objLayout->sf_onBeforeShow != NULL) ? "onBeforeShow: ".$objLayout->sf_onBeforeShow : '');
+        $options[13] = (($objLayout->sf_onShow != NULL) ? "onShow: ".$objLayout->sf_onShow : '');
+        $options[14] = (($objLayout->sf_onHide != NULL) ? "onHide: ".$objLayout->sf_onHide : '');
+        $options[15] = (($objLayout->sf_onIdle != NULL) ? "onIdle: ".$objLayout->sf_onIdle : '');
         
         // remove empty value
         foreach ($options as $key => $value) {

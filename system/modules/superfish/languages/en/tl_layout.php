@@ -16,13 +16,16 @@
 $GLOBALS['TL_LANG']['tl_layout']['superfish']       = array('Superfish', 'Enable superfish.');
 $GLOBALS['TL_LANG']['tl_layout']['hoverIntent']     = array('Hover intent - plugin', 'Advanced hover behaviour for the mouseovers. (Require jQuery 1.5.1+)');
 $GLOBALS['TL_LANG']['tl_layout']['sf_delay']        = array('Delay', 'The delay in milliseconds that the mouse can remain outside a submenu without it closing.');
-$GLOBALS['TL_LANG']['tl_layout']['sf_speed']        = array('Speed', 'Speed of the animation. Equivalent to second parameter of jQuery’s .animate() method.');
+$GLOBALS['TL_LANG']['tl_layout']['sf_speed']        = array('Speed', 'Speed of the opening animation. Equivalent to second parameter of jQuery’s .animate() method.');
+$GLOBALS['TL_LANG']['tl_layout']['sf_speedOut']     = array('Speed out', 'Speed of the closing animation. Equivalent to second parameter of jQuery’s .animate() method.');
 $GLOBALS['TL_LANG']['tl_layout']['sf_autoArrows']   = array('Auto arrows', 'If true, arrow mark-up generated automatically = cleaner source code at expense of initialisation performance.');
 $GLOBALS['TL_LANG']['tl_layout']['sf_disableHI']    = array('Disable HI', 'Set to true to disable hoverIntent detection.');
+$GLOBALS['TL_LANG']['tl_layout']['sf_useClick']     = array('Use click', 'Set this to true to require a click to open and close sub-menus. Note that the link will never be followed when in this mode.');
 $GLOBALS['TL_LANG']['tl_layout']['sf_hoverClass']   = array('Hover class', 'The class applied to hovered list items.');
 $GLOBALS['TL_LANG']['tl_layout']['sf_pathClass']    = array('Path class', 'The class you have applied to list items that lead to the current page.');
 $GLOBALS['TL_LANG']['tl_layout']['sf_pathLevels']   = array('Path levels', 'The number of levels of submenus that remain open or are restored using pathClass.');
-$GLOBALS['TL_LANG']['tl_layout']['sf_animation']    = array('Animation', 'An object equivalent to first parameter of jQuery’s .animate() method.');
+$GLOBALS['TL_LANG']['tl_layout']['sf_animation']    = array('Animation', 'An object equivalent to first parameter of jQuery’s .animate() method. Used to animate the sub-menu open.');
+$GLOBALS['TL_LANG']['tl_layout']['sf_animationOut'] = array('Animation out', 'An object equivalent to first parameter of jQuery’s .animate() method Used to animate the sub-menu closed.');
 $GLOBALS['TL_LANG']['tl_layout']['sf_onInit']       = array('On init', 'Callback function fires once Superfish is initialised – \'this\' is the containing ul.');
 $GLOBALS['TL_LANG']['tl_layout']['sf_onBeforeShow'] = array('On before show', 'Callback function fires just before reveal animation begins – \'this\' is the ul about to open.');
 $GLOBALS['TL_LANG']['tl_layout']['sf_onShow']       = array('On show', 'Callback function fires once reveal animation completed – \'this\' is the opened ul.');
