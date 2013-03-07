@@ -70,7 +70,9 @@
 					.on('focusin', 'li', over)
 					.on('focusout', 'li', out)
 					.on('click', 'a', clickHandler)
-					.on(touchstart, 'a', touchHandler);
+                                        .on('click', 'span.active', clickHandler)
+					.on(touchstart, 'a', touchHandler)
+                                        .on(touchstart, 'span.active', touchHandler);
 			},
 			touchHandler = function(e){
         var $$ = $(this),
