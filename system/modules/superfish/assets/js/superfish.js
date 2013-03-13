@@ -1,6 +1,6 @@
 
 /*
- * Superfish v1.5.11 - jQuery menu widget
+ * Superfish v1.5.12 - jQuery menu widget
  * Copyright (c) 2013 Joel Birch
  *
  * Dual licensed under the MIT and GPL licenses:
@@ -63,16 +63,16 @@
 				}
 				var touchstart = 'MSPointerDown';
 				//Sorry, but avoiding weird glitches with touchstart. iOS doesn't need it, anyway.
-				if ( !navigator.userAgent.match(/iPhone/i) && !navigator.userAgent.match(/iPad/i) ){
+				if ( !navigator.userAgent.toLowerCase().match(/(iphone|ipod|ipad)/) ){
 					touchstart += ' touchstart';
 				}
 				$menu
 					.on('focusin', 'li', over)
 					.on('focusout', 'li', out)
 					.on('click', 'a', clickHandler)
-                                        .on('click', 'span.active', clickHandler)
+					.on('click', 'span.active', clickHandler)
 					.on(touchstart, 'a', touchHandler)
-                                        .on(touchstart, 'span.active', touchHandler);
+					.on(touchstart, 'span.active', touchHandler);
 			},
 			touchHandler = function(e){
         var $$ = $(this),
@@ -126,7 +126,7 @@
 			applyTouchAction($$);
 			applyHandlers($$);
 
-			$liHasUl.not('.'+c.bcClass).hideSuperfishUl();
+			$liHasUl.not('.'+c.bcClass).children('ul').show().hide();
 			
 			o.onInit.call(this);
 			
