@@ -1,6 +1,6 @@
 
 /*
- * Superfish v1.5.12 - jQuery menu widget
+ * Superfish v1.5.13 - jQuery menu widget
  * Copyright (c) 2013 Joel Birch
  *
  * Dual licensed under the MIT and GPL licenses:
@@ -167,24 +167,24 @@
 				$$ = this,
 				not = (o.retainPath===true) ? o.$path : '';
 			o.retainPath = false;
-			var $ul = $('li.'+o.hoverClass,this).add(this).not(not)
-					.find('>ul').stop().animate(o.animationOut,o.speedOut,function(){
-						$ul = $(this);
-						$ul.parent().removeClass(o.hoverClass);
-						o.onHide.call($ul);
-						if (sf.op.useClick){
-							$$.children('a').data('follow', false);
-						}
-					});
+			$('li.'+o.hoverClass,this).add(this).not(not)
+				.children('ul').stop(true,true).animate(o.animationOut,o.speedOut,function(){
+					$ul = $(this);
+					$ul.parent().removeClass(o.hoverClass);
+					o.onHide.call($ul);
+					if (sf.op.useClick){
+						$$.children('a').data('follow', false);
+					}
+				});
 			return this;
 		},
 		showSuperfishUl : function(){
 			var o = sf.op,
 				$$ = this,
-				$ul = this.find('>ul:hidden');
-				$ul.parent('li').addClass(o.hoverClass);
+				$ul = this.children('ul');
+			$$.addClass(o.hoverClass);
 			o.onBeforeShow.call($ul);
-			$ul.stop().animate(o.animation,o.speed,function(){
+			$ul.stop(true,true).animate(o.animation,o.speed,function(){
 				o.onShow.call($ul);
 				$$.children('a').data('follow', true);
 			});
