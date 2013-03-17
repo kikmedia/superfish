@@ -1,5 +1,5 @@
 
-<ul class="<?php echo $this->level; ?> sf-menu sf-navbar">
+<ul class="<?php echo $this->level . (($this->level == "level_1") ? " sf-menu sf-navbar" : ""); ?>">
 <?php foreach ($this->items as $item): ?>
 <?php if ($item['isActive']): ?>
 <li class="active<?php if ($item['class']): ?> <?php echo $item['class']; ?><?php endif; ?>"><span class="active<?php if ($item['class']): ?> <?php echo $item['class']; ?><?php endif; ?>"><?php echo $item['link']; ?></span><?php echo $item['subitems']; ?></li>
