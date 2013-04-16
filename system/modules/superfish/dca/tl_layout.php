@@ -24,7 +24,7 @@ $GLOBALS['TL_DCA']['tl_layout']['palettes']['default'] = str_replace
 // Add superfish fields to subpalettes.
 $GLOBALS['TL_DCA']['tl_layout']['palettes']['__selector__'][] = 'superfish';
 $GLOBALS['TL_DCA']['tl_layout']['palettes']['__selector__'][] = 'supersubs';
-$GLOBALS['TL_DCA']['tl_layout']['subpalettes']['superfish'] = 'hoverIntent,sf_hoverClass,sf_pathClass,sf_pathLevels,sf_delay,sf_animation,sf_animationOut,sf_speed,sf_speedOut,sf_autoArrows,sf_disableHI,sf_useClick,sf_onInit,sf_onBeforeShow,sf_onShow,sf_onHide,sf_onIdle,supersubs';
+$GLOBALS['TL_DCA']['tl_layout']['subpalettes']['superfish'] = 'hoverIntent,sf_hoverClass,sf_pathClass,sf_pathLevels,sf_delay,sf_animation,sf_animationOut,sf_speed,sf_speedOut,sf_cssArrows,sf_disableHI,sf_onInit,sf_onBeforeShow,sf_onShow,sf_onHide,sf_onIdle,supersubs';
 $GLOBALS['TL_DCA']['tl_layout']['subpalettes']['supersubs'] = 'sf_minWidth,sf_maxWidth,sf_extraWidth';
 
 $GLOBALS['TL_DCA']['tl_layout']['fields']['superfish'] = array
@@ -46,14 +46,6 @@ $GLOBALS['TL_DCA']['tl_layout']['fields']['hoverIntent'] = array
 $GLOBALS['TL_DCA']['tl_layout']['fields']['sf_disableHI'] = array
 (
     'label'      => &$GLOBALS['TL_LANG']['tl_layout']['sf_disableHI'],
-    'exclude'    => true,
-    'inputType'  => 'checkbox',
-    'eval'       => array('isBoolean' => true, 'tl_class'=>'clr m12')
-);
-
-$GLOBALS['TL_DCA']['tl_layout']['fields']['sf_useClick'] = array
-(
-    'label'      => &$GLOBALS['TL_LANG']['tl_layout']['sf_useClick'],
     'exclude'    => true,
     'inputType'  => 'checkbox',
     'eval'       => array('isBoolean' => true, 'tl_class'=>'clr m12')
@@ -94,9 +86,9 @@ $GLOBALS['TL_DCA']['tl_layout']['fields']['sf_speedOut'] = array
     'eval'       => array('maxlength'=>255, 'tl_class'=>'w50')
 );
 
-$GLOBALS['TL_DCA']['tl_layout']['fields']['sf_autoArrows'] = array
+$GLOBALS['TL_DCA']['tl_layout']['fields']['sf_cssArrows'] = array
 (
-    'label'      => &$GLOBALS['TL_LANG']['tl_layout']['sf_autoArrows'],
+    'label'      => &$GLOBALS['TL_LANG']['tl_layout']['sf_cssArrows'],
     'exclude'    => true,
     'default'    => true,
     'inputType'  => 'checkbox',

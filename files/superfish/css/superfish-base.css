@@ -1,76 +1,32 @@
 /* ESSENTIAL STYLES */
-.sf-menu,
-.sf-menu *
-{
-    margin:0;
-    padding:0;
+.sf-menu, .sf-menu * {
+    margin: 0;
+    padding: 0;
     list-style: none;
 }
-
-.sf-menu
-{
-    line-height:1.0;
+.sf-menu li {
+    position: relative;
 }
-
-.sf-menu ul
-{
-    width:10em;
-    top:-999em;
-    position:absolute;
-}
-
-.sf-menu ul li
-{
-    width:100%;
-}
-
-.sf-menu li:hover
-{
-    visibility: inherit;
-}
-
-.sf-menu li
-{
-    position:relative;
-    float:left;
-}
-
-.sf-menu a
-{
-    position:relative;
-    display:block;
-}
-
-.sf-menu li:hover ul,
-.sf-menu li.sfHover ul
-{
-    left:0;
-    top:2.5em;
+.sf-menu ul {
+    position: absolute;
+    display: none;
+    top: 100%;
+    left: 0;
     z-index: 99;
 }
-
-ul.sf-menu li:hover li ul,
-ul.sf-menu li.sfHover li ul
-{
-    top:-999em;
+.sf-menu > li {
+    float: left;
+}
+.sf-menu li:hover > ul,
+.sf-menu li.sfHover > ul {
+    display: block;
 }
 
-ul.sf-menu li li:hover ul,
-ul.sf-menu li li.sfHover ul
-{
-    left:10em;
+.sf-menu a {
+    display: block;
+    position: relative;
+}
+.sf-menu ul ul {
     top: 0;
-}
-
-ul.sf-menu li li:hover li ul,
-ul.sf-menu li li.sfHover li ul
-{
-    top:-999em;
-}
-
-ul.sf-menu li li li:hover ul,
-ul.sf-menu li li li.sfHover ul
-{
-    left:10em;
-    top: 0;
+    left: 100%;
 }
