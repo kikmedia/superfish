@@ -31,7 +31,9 @@ CREATE TABLE `tl_layout` (
   `sf_onInit` text NULL,
   `sf_onBeforeShow` text NULL,
   `sf_onShow` text NULL,
+  `sf_onBeforeHide` text NULL,
   `sf_onHide` text NULL,
   `sf_onIdle` text NULL,
+  `sf_onDestroy` text NULL,
   PRIMARY KEY  (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
