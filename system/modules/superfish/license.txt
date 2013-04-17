@@ -1,4 +1,5 @@
 Superfish by Joel Birch (http://users.tpg.com.au/j_birch/plugins/superfish/)
+License: MIT
 
 -----
 
