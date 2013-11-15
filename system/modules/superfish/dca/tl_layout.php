@@ -32,7 +32,8 @@ $GLOBALS['TL_DCA']['tl_layout']['fields']['superfish'] = array
     'label'      => &$GLOBALS['TL_LANG']['tl_layout']['superfish'],
     'exclude'    => true,
     'inputType'  => 'checkbox',
-    'eval'       => array('submitOnChange'=>true)
+    'eval'       => array('submitOnChange'=>true),
+    'sql'        => "char(1) NOT NULL default ''"
 );
 
 $GLOBALS['TL_DCA']['tl_layout']['fields']['hoverIntent'] = array
@@ -40,7 +41,8 @@ $GLOBALS['TL_DCA']['tl_layout']['fields']['hoverIntent'] = array
     'label'      => &$GLOBALS['TL_LANG']['tl_layout']['hoverIntent'],
     'exclude'    => true,
     'inputType'  => 'checkbox',
-    'eval'       => array('isBoolean' => true, 'tl_class'=>'w50 m12')
+    'eval'       => array('isBoolean' => true, 'tl_class'=>'w50 m12'),
+    'sql'        => "char(1) NOT NULL default ''"
 );
 
 $GLOBALS['TL_DCA']['tl_layout']['fields']['sf_disableHI'] = array
@@ -48,7 +50,8 @@ $GLOBALS['TL_DCA']['tl_layout']['fields']['sf_disableHI'] = array
     'label'      => &$GLOBALS['TL_LANG']['tl_layout']['sf_disableHI'],
     'exclude'    => true,
     'inputType'  => 'checkbox',
-    'eval'       => array('isBoolean' => true, 'tl_class'=>'w50 m12')
+    'eval'       => array('isBoolean' => true, 'tl_class'=>'w50 m12'),
+    'sql'        => "char(1) NOT NULL default ''"
 );
 
 $GLOBALS['TL_DCA']['tl_layout']['fields']['supersubs'] = array
@@ -56,7 +59,8 @@ $GLOBALS['TL_DCA']['tl_layout']['fields']['supersubs'] = array
     'label'      => &$GLOBALS['TL_LANG']['tl_layout']['supersubs'],
     'exclude'    => true,
     'inputType'  => 'checkbox',
-    'eval'       => array('submitOnChange'=>true, 'tl_class'=>'w50 m12')
+    'eval'       => array('submitOnChange'=>true, 'tl_class'=>'w50 m12'),
+    'sql'        => "char(1) NOT NULL default ''"
 );
 
 $GLOBALS['TL_DCA']['tl_layout']['fields']['sf_delay'] = array
@@ -65,7 +69,8 @@ $GLOBALS['TL_DCA']['tl_layout']['fields']['sf_delay'] = array
     'exclude'    => true,
     'default'    => '200',
     'inputType'  => 'text',
-    'eval'       => array('rgxp'=>'digit', 'maxlength'=>10, 'tl_class'=>'clr')
+    'eval'       => array('rgxp'=>'digit', 'maxlength'=>10, 'tl_class'=>'clr'),
+    'sql'        => "int(10) unsigned NOT NULL default '200'"
 );
 
 $GLOBALS['TL_DCA']['tl_layout']['fields']['sf_speed'] = array
@@ -74,7 +79,8 @@ $GLOBALS['TL_DCA']['tl_layout']['fields']['sf_speed'] = array
     'exclude'    => true,
     'default'    => 'normal',
     'inputType'  => 'text',
-    'eval'       => array('maxlength'=>255, 'tl_class'=>'w50')
+    'eval'       => array('maxlength'=>255, 'tl_class'=>'w50'),
+    'sql'        => "varchar(32) NOT NULL default 'normal'"
 );
 
 $GLOBALS['TL_DCA']['tl_layout']['fields']['sf_speedOut'] = array
@@ -83,7 +89,8 @@ $GLOBALS['TL_DCA']['tl_layout']['fields']['sf_speedOut'] = array
     'exclude'    => true,
     'default'    => 'fast',
     'inputType'  => 'text',
-    'eval'       => array('maxlength'=>255, 'tl_class'=>'w50')
+    'eval'       => array('maxlength'=>255, 'tl_class'=>'w50'),
+    'sql'        => "varchar(32) NOT NULL default 'fast'"
 );
 
 $GLOBALS['TL_DCA']['tl_layout']['fields']['sf_cssArrows'] = array
@@ -92,7 +99,8 @@ $GLOBALS['TL_DCA']['tl_layout']['fields']['sf_cssArrows'] = array
     'exclude'    => true,
     'default'    => true,
     'inputType'  => 'checkbox',
-    'eval'       => array('isBoolean' => true, 'tl_class'=>'w50 m12')
+    'eval'       => array('isBoolean' => true, 'tl_class'=>'w50 m12'),
+    'sql'        => "char(1) NOT NULL default '1'"
 );
 
 $GLOBALS['TL_DCA']['tl_layout']['fields']['sf_minWidth'] = array
@@ -101,7 +109,8 @@ $GLOBALS['TL_DCA']['tl_layout']['fields']['sf_minWidth'] = array
     'exclude'    => true,
     'default'    => '12',
     'inputType'  => 'text',
-    'eval'       => array('rgxp'=>'digit', 'maxlength'=>10, 'tl_class'=>'w50')
+    'eval'       => array('rgxp'=>'digit', 'maxlength'=>10, 'tl_class'=>'w50'),
+    'sql'        => "int(10) unsigned NOT NULL default '12'"
 );
 
 $GLOBALS['TL_DCA']['tl_layout']['fields']['sf_maxWidth'] = array
@@ -110,7 +119,8 @@ $GLOBALS['TL_DCA']['tl_layout']['fields']['sf_maxWidth'] = array
     'exclude'    => true,
     'default'    => '27',
     'inputType'  => 'text',
-    'eval'       => array('rgxp'=>'digit', 'maxlength'=>10, 'tl_class'=>'w50')
+    'eval'       => array('rgxp'=>'digit', 'maxlength'=>10, 'tl_class'=>'w50'),
+    'sql'        => "int(10) unsigned NOT NULL default '27'"
 );
 
 $GLOBALS['TL_DCA']['tl_layout']['fields']['sf_extraWidth'] = array
@@ -119,7 +129,8 @@ $GLOBALS['TL_DCA']['tl_layout']['fields']['sf_extraWidth'] = array
     'exclude'    => true,
     'default'    => '1',
     'inputType'  => 'text',
-    'eval'       => array('rgxp'=>'digit', 'maxlength'=>10, 'tl_class'=>'w50')
+    'eval'       => array('rgxp'=>'digit', 'maxlength'=>10, 'tl_class'=>'w50'),
+    'sql'        => "int(10) unsigned NOT NULL default '1'"
 );
 
 $GLOBALS['TL_DCA']['tl_layout']['fields']['sf_hoverClass'] = array
@@ -128,7 +139,8 @@ $GLOBALS['TL_DCA']['tl_layout']['fields']['sf_hoverClass'] = array
     'exclude'    => true,
     'default'    => 'sfHover',
     'inputType'  => 'text',
-    'eval'       => array('maxlength'=>255, 'tl_class'=>'w50')
+    'eval'       => array('maxlength'=>255, 'tl_class'=>'w50'),
+    'sql'        => "varchar(32) NOT NULL default 'sfHover'"
 );
 
 $GLOBALS['TL_DCA']['tl_layout']['fields']['sf_pathClass'] = array
@@ -136,7 +148,8 @@ $GLOBALS['TL_DCA']['tl_layout']['fields']['sf_pathClass'] = array
     'label'      => &$GLOBALS['TL_LANG']['tl_layout']['sf_pathClass'],
     'exclude'    => true,
     'inputType'  => 'text',
-    'eval'       => array('maxlength'=>255, 'tl_class'=>'w50')
+    'eval'       => array('maxlength'=>255, 'tl_class'=>'w50'),
+    'sql'        => "varchar(32) NOT NULL default ''"
 );
 
 $GLOBALS['TL_DCA']['tl_layout']['fields']['sf_animation'] = array
@@ -144,7 +157,8 @@ $GLOBALS['TL_DCA']['tl_layout']['fields']['sf_animation'] = array
     'label'      => &$GLOBALS['TL_LANG']['tl_layout']['sf_animation'],
     'exclude'    => true,
     'inputType'  => 'textarea',
-    'eval'       => array('style'=>'height:100px;', 'preserveTags'=>true)
+    'eval'       => array('style'=>'height:100px;', 'preserveTags'=>true),
+    'sql'        => "text NULL"
 );
 
 $GLOBALS['TL_DCA']['tl_layout']['fields']['sf_animationOut'] = array
@@ -152,7 +166,8 @@ $GLOBALS['TL_DCA']['tl_layout']['fields']['sf_animationOut'] = array
     'label'      => &$GLOBALS['TL_LANG']['tl_layout']['sf_animationOut'],
     'exclude'    => true,
     'inputType'  => 'textarea',
-    'eval'       => array('style'=>'height:100px;', 'preserveTags'=>true)
+    'eval'       => array('style'=>'height:100px;', 'preserveTags'=>true),
+    'sql'        => "text NULL"
 );
 
 $GLOBALS['TL_DCA']['tl_layout']['fields']['sf_onInit'] = array
@@ -160,7 +175,8 @@ $GLOBALS['TL_DCA']['tl_layout']['fields']['sf_onInit'] = array
     'label'      => &$GLOBALS['TL_LANG']['tl_layout']['sf_onInit'],
     'exclude'    => true,
     'inputType'  => 'textarea',
-    'eval'       => array('style'=>'height:100px;', 'preserveTags'=>true)
+    'eval'       => array('style'=>'height:100px;', 'preserveTags'=>true),
+    'sql'        => "text NULL"
 );
 
 $GLOBALS['TL_DCA']['tl_layout']['fields']['sf_onBeforeShow'] = array
@@ -168,7 +184,8 @@ $GLOBALS['TL_DCA']['tl_layout']['fields']['sf_onBeforeShow'] = array
     'label'      => &$GLOBALS['TL_LANG']['tl_layout']['sf_onBeforeShow'],
     'exclude'    => true,
     'inputType'  => 'textarea',
-    'eval'       => array('style'=>'height:100px;', 'preserveTags'=>true)
+    'eval'       => array('style'=>'height:100px;', 'preserveTags'=>true),
+    'sql'        => "text NULL"
 );
 
 $GLOBALS['TL_DCA']['tl_layout']['fields']['sf_onShow'] = array
@@ -176,7 +193,8 @@ $GLOBALS['TL_DCA']['tl_layout']['fields']['sf_onShow'] = array
     'label'      => &$GLOBALS['TL_LANG']['tl_layout']['sf_onShow'],
     'exclude'    => true,
     'inputType'  => 'textarea',
-    'eval'       => array('style'=>'height:100px;', 'preserveTags'=>true)
+    'eval'       => array('style'=>'height:100px;', 'preserveTags'=>true),
+    'sql'        => "text NULL"
 );
 
 $GLOBALS['TL_DCA']['tl_layout']['fields']['sf_onHide'] = array
@@ -184,7 +202,8 @@ $GLOBALS['TL_DCA']['tl_layout']['fields']['sf_onHide'] = array
     'label'      => &$GLOBALS['TL_LANG']['tl_layout']['sf_onHide'],
     'exclude'    => true,
     'inputType'  => 'textarea',
-    'eval'       => array('style'=>'height:100px;', 'preserveTags'=>true)
+    'eval'       => array('style'=>'height:100px;', 'preserveTags'=>true),
+    'sql'        => "text NULL"
 );
 
 $GLOBALS['TL_DCA']['tl_layout']['fields']['sf_onIdle'] = array
@@ -192,7 +211,8 @@ $GLOBALS['TL_DCA']['tl_layout']['fields']['sf_onIdle'] = array
     'label'      => &$GLOBALS['TL_LANG']['tl_layout']['sf_onIdle'],
     'exclude'    => true,
     'inputType'  => 'textarea',
-    'eval'       => array('style'=>'height:100px;', 'preserveTags'=>true)
+    'eval'       => array('style'=>'height:100px;', 'preserveTags'=>true),
+    'sql'        => "text NULL"
 );
 
 $GLOBALS['TL_DCA']['tl_layout']['fields']['sf_pathLevels'] = array
@@ -201,7 +221,8 @@ $GLOBALS['TL_DCA']['tl_layout']['fields']['sf_pathLevels'] = array
     'exclude'    => true,
     'default'    => '1',
     'inputType'  => 'text',
-    'eval'       => array('rgxp'=>'digit', 'maxlength'=>10, 'tl_class'=>'w50')
+    'eval'       => array('rgxp'=>'digit', 'maxlength'=>10, 'tl_class'=>'w50'),
+    'sql'        => "int(10) unsigned NOT NULL default '1'"
 );
 
 $GLOBALS['TL_DCA']['tl_layout']['fields']['sf_onBeforeHide'] = array
@@ -209,7 +230,8 @@ $GLOBALS['TL_DCA']['tl_layout']['fields']['sf_onBeforeHide'] = array
     'label'      => &$GLOBALS['TL_LANG']['tl_layout']['sf_onBeforeHide'],
     'exclude'    => true,
     'inputType'  => 'textarea',
-    'eval'       => array('style'=>'height:100px;', 'preserveTags'=>true)
+    'eval'       => array('style'=>'height:100px;', 'preserveTags'=>true),
+    'sql'        => "text NULL"
 );
 
 $GLOBALS['TL_DCA']['tl_layout']['fields']['sf_onDestroy'] = array
@@ -217,6 +239,7 @@ $GLOBALS['TL_DCA']['tl_layout']['fields']['sf_onDestroy'] = array
     'label'      => &$GLOBALS['TL_LANG']['tl_layout']['sf_onDestroy'],
     'exclude'    => true,
     'inputType'  => 'textarea',
-    'eval'       => array('style'=>'height:100px;', 'preserveTags'=>true)
+    'eval'       => array('style'=>'height:100px;', 'preserveTags'=>true),
+    'sql'        => "text NULL"
 );
 ?>
