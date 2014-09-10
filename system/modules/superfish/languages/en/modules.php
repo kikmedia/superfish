@@ -14,4 +14,3 @@
  * Back end modules
  */
 $GLOBALS['TL_LANG']['MOD']['superfish'] = array('Superfish', 'jQuery superfish dropdown menu.');
-?>

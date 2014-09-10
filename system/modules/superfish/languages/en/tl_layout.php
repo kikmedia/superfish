@@ -42,4 +42,3 @@ $GLOBALS['TL_LANG']['tl_layout']['sf_extraWidth']   = array('Extra width', 'Extr
  * Legends
  */
 $GLOBALS['TL_LANG']['tl_layout']['superfish_legend'] = 'Superfish';
-?>

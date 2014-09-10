@@ -9,13 +9,12 @@
  * @package   superfish
  * @license   MIT (http://lionel-m.mit-license.org/)
  */
- 
+
 /**
  * Table tl_layout
  */
 // Changing the palette to add new fields.
-$GLOBALS['TL_DCA']['tl_layout']['palettes']['default'] = str_replace
-(
+$GLOBALS['TL_DCA']['tl_layout']['palettes']['default'] = str_replace(
     '{script_legend:hide}',
     '{superfish_legend},superfish;{script_legend:hide}',
     $GLOBALS['TL_DCA']['tl_layout']['palettes']['default']
@@ -242,4 +241,3 @@ $GLOBALS['TL_DCA']['tl_layout']['fields']['sf_onDestroy'] = array
     'eval'       => array('style'=>'height:100px;', 'preserveTags'=>true),
     'sql'        => "text NULL"
 );
-?>

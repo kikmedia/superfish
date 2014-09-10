@@ -15,8 +15,8 @@
  */
 ClassLoader::addClasses(array
 (
-	// Classes
-	'Contao\Superfish' => 'system/modules/superfish/classes/Superfish.php',
+    // Classes
+    'Contao\Superfish' => 'system/modules/superfish/classes/Superfish.php',
 ));
 
 /**
@@ -24,7 +24,7 @@ ClassLoader::addClasses(array
  */
 TemplateLoader::addFiles(array
 (
-	'nav_superfish_horizontal' => 'system/modules/superfish/templates',
-	'nav_superfish_navbar'     => 'system/modules/superfish/templates',
-	'nav_superfish_vertical'   => 'system/modules/superfish/templates',
+    'nav_superfish_horizontal' => 'system/modules/superfish/templates',
+    'nav_superfish_navbar'     => 'system/modules/superfish/templates',
+    'nav_superfish_vertical'   => 'system/modules/superfish/templates',
 ));
