@@ -33,7 +33,7 @@
     "extra": {
         "contao": {
             "userfiles": {
-                "files/superfish/css": "superfish/css"
+                "src/Resources/files/superfish/css": "files/superfish/css"
             }
         }
     }
