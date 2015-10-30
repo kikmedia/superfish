@@ -29,5 +29,12 @@
         "psr-4": {
             "LionelM\\SuperfishBundle\\": "src/"
         }
+    },
+    "extra": {
+        "contao": {
+            "userfiles": {
+                "files/superfish/css": "superfish/css"
+            }
+        }
     }
 }
