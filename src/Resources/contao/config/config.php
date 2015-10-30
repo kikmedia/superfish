@@ -15,4 +15,4 @@
  * HOOKS
  * -------------------------------------------------------------------------
  */
-$GLOBALS['TL_HOOKS']['generatePage'][] = array('Superfish', 'myGeneratePage');
+$GLOBALS['TL_HOOKS']['generatePage'][] = array('SuperfishBundle\Superfish', 'myGeneratePage');

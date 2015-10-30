@@ -1,0 +1,7 @@
+Superfish by Joel Birch (http://users.tpg.com.au/j_birch/plugins/superfish/)
+License: MIT
+
+-----
+
+Contao extension by Lionel Maccaud (https://github.com/lionel-m)
+License: MIT (http://lionel-m.mit-license.org/)

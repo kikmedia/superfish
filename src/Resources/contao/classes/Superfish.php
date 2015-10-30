@@ -13,7 +13,7 @@
 /**
  * Run in a custom namespace, so the class can be replaced
  */
-namespace Contao;
+namespace LionelM\Superfish;
 
 /**
  * Class Superfish
@@ -38,14 +38,14 @@ class Superfish extends \Frontend
         $options[7]  = "speedOut: ".(is_numeric($objLayout->sf_speedOut) ? $objLayout->sf_speedOut : "'".$objLayout->sf_speedOut."'");
         $options[8]  = (($objLayout->sf_cssArrows == 1) ? '' : "cssArrows: false");
         $options[9]  = (($objLayout->sf_disableHI == 1) ? "disableHI: true" : '');
-        $options[10]  = (($objLayout->sf_onInit != null) ? "onInit: ".$objLayout->sf_onInit : '');
-        $options[11]  = (($objLayout->sf_onBeforeShow != null) ? "onBeforeShow: ".$objLayout->sf_onBeforeShow : '');
+        $options[10] = (($objLayout->sf_onInit != null) ? "onInit: ".$objLayout->sf_onInit : '');
+        $options[11] = (($objLayout->sf_onBeforeShow != null) ? "onBeforeShow: ".$objLayout->sf_onBeforeShow : '');
         $options[12] = (($objLayout->sf_onShow != null) ? "onShow: ".$objLayout->sf_onShow : '');
         $options[13] = (($objLayout->sf_onBeforeHide != null) ? "onBeforeHide: ".$objLayout->sf_onBeforeHide : '');
         $options[14] = (($objLayout->sf_onHide != null) ? "onHide: ".$objLayout->sf_onHide : '');
         $options[15] = (($objLayout->sf_onIdle != null) ? "onIdle: ".$objLayout->sf_onIdle : '');
         $options[16] = (($objLayout->sf_onDestroy != null) ? "onDestroy: ".$objLayout->sf_onDestroy : '');
-        
+
         // remove empty value
         foreach ($options as $key => $value) {
             if (empty($value)) {
@@ -61,17 +61,19 @@ class Superfish extends \Frontend
 
         if ($objLayout->superfish == 1) {
             $GLOBALS['TL_JQUERY'][] =
-                (($objLayout->hoverIntent == 1) ? '<script' . ($objLayout->doctype != 'html5' ? ' type="text/javascript"' : '') . ' src="system/modules/superfish/assets/js/hoverIntent.js"></script>' : '') . "\n" .
-                "<script" . ($objLayout->doctype != 'html5' ? ' type="text/javascript"' : '') . " src=\"system/modules/superfish/assets/js/superfish.js\"></script>" . "\n" .
-                (($objLayout->supersubs == 1) ? '<script' . ($objLayout->doctype != 'html5' ? ' type="text/javascript"' : '') . ' src="system/modules/superfish/assets/js/supersubs.js"></script>' : '') . "\n" .
-                "<script" . ($objLayout->doctype != 'html5' ? ' type="text/javascript"' : '') . ">
+                (($objLayout->hoverIntent == 1) ?
+                '<script src="web/bundles/lionelmsuperfish/js/hoverIntent.js"></script>' : '') . "\n" .
+                '<script src="web/bundles/lionelmsuperfish/js/superfish.js"></script>' . "\n" .
+                (($objLayout->supersubs == 1) ?
+                '<script src="web/bundles/lionelmsuperfish/js/supersubs.js"></script>' : '') . "\n" .
+                "<script>
                     (function($) { ".
                     (($objLayout->supersubs == 0) ? "
                         $(\"ul.sf-menu\").superfish({" ."\n".
                             $options.
                         " });
                         " : "
-                        $(\"ul.sf-menu\").supersubs({ 
+                        $(\"ul.sf-menu\").supersubs({
                                 minWidth: ".$objLayout->sf_minWidth.",
                                 maxWidth: ".$objLayout->sf_maxWidth.",
                                 extraWidth: ".$objLayout->sf_extraWidth."

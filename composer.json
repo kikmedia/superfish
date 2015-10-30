@@ -18,21 +18,16 @@
         "source":"https://github.com/lionel-m/superfish"
     },
     "require":{
-        "php":">=5.3",
-        "contao/core": ">=3.3,<4.0-dev",
-        "contao-community-alliance/composer-plugin": "~2.0"
+        "php":">=5.4.0",
+        "symfony/framework-bundle": "~2.7",
+        "contao/core-bundle": "~4.0"
     },
     "replace": {
             "contao-legacy/superfish": "self.version"
     },
-    "extra": {
-        "contao": {
-            "sources": {
-                "system/modules/superfish": "system/modules/superfish"
-            },
-            "userfiles": {
-                "files/superfish/css": "superfish/css"
-            }
+    "autoload": {
+        "psr-4": {
+            "LionelM\\SuperfishBundle\\": "src/"
         }
     }
 }
