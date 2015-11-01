@@ -13,7 +13,7 @@
 /**
  * Run in a custom namespace, so the class can be replaced
  */
-namespace LionelM\Superfish;
+namespace LionelM\SuperfishBundle;
 
 /**
  * Class Superfish
@@ -62,10 +62,10 @@ class Superfish extends \Frontend
         if ($objLayout->superfish == 1) {
             $GLOBALS['TL_JQUERY'][] =
                 (($objLayout->hoverIntent == 1) ?
-                '<script src="web/bundles/lionelmsuperfish/js/hoverIntent.js"></script>' : '') . "\n" .
-                '<script src="web/bundles/lionelmsuperfish/js/superfish.js"></script>' . "\n" .
+                '<script src="bundles/lionelmsuperfish/js/hoverIntent.js"></script>' : '') . "\n" .
+                '<script src="bundles/lionelmsuperfish/js/superfish.js"></script>' . "\n" .
                 (($objLayout->supersubs == 1) ?
-                '<script src="web/bundles/lionelmsuperfish/js/supersubs.js"></script>' : '') . "\n" .
+                '<script src="bundles/lionelmsuperfish/js/supersubs.js"></script>' : '') . "\n" .
                 "<script>
                     (function($) { ".
                     (($objLayout->supersubs == 0) ? "

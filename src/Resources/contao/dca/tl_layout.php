@@ -15,8 +15,8 @@
  */
 // Changing the palette to add new fields.
 $GLOBALS['TL_DCA']['tl_layout']['palettes']['default'] = str_replace(
-    '{script_legend:hide}',
-    '{superfish_legend},superfish;{script_legend:hide}',
+    '{script_legend}',
+    '{superfish_legend},superfish;{script_legend}',
     $GLOBALS['TL_DCA']['tl_layout']['palettes']['default']
 );
 
