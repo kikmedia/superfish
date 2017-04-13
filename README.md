@@ -1,6 +1,6 @@
 ## Superfish bundle for the [Contao CMS](https://contao.org/en)
 
-The official website of this project is: <http://users.tpg.com.au/j_birch/plugins/superfish>
+The official website of this project is: <https://superfish.joelbirch.co>
 
 ### Installation
 
