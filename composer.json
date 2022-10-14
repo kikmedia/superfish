@@ -11,27 +11,35 @@
         "homepage":"http://lionelmaccaud.ch",
         "role":"Developer"
         }
+        {
+        "name":"Carolina Koehn",
+        "email":"ck@kikmedia.de",
+        "homepage":"https://kikmedia.de",
+        "role":"Developer"
     ],
     "support":{
         "email":"work@lionelmaccaud.ch",
-        "issues":"https://github.com/lionel-m/superfish/issues?page=1&state=open",
-        "source":"https://github.com/lionel-m/superfish"
+        "issues":"https://github.com/kikmedia/superfish/issues?page=1&state=open",
+        "source":"https://github.com/kikmedia/superfish"
     },
     "require":{
-        "php":">=5.3",
-        "contao/core": ">=3.3,<4.0-dev",
+        "php":">=7.4.0",
+        "symfony/framework-bundle": "~2.7",
+        "contao/core-bundle": "~4.0",
         "contao-community-alliance/composer-plugin": "~2.0"
     },
     "replace": {
             "contao-legacy/superfish": "self.version"
     },
+    "autoload": {
+        "psr-4": {
+            "Kikmedia\\SuperfishBundle\\": "src/"
+        }
+    },
     "extra": {
         "contao": {
-            "sources": {
-                "system/modules/superfish": "system/modules/superfish"
-            },
             "userfiles": {
-                "files/superfish/css": "superfish/css"
+                "src/Resources/files/superfish/css": "superfish/css"
             }
         }
     }
